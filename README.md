@@ -2,11 +2,11 @@
 
 A clean, scalable, and production-ready Task Manager application built with modern web technologies. This project demonstrates best practices in full-stack development with a focus on code structure, separation of concerns, and user experience.
 
-## 🎯 Overview
+##  Overview
 
 **Task Manager** is a full-stack web application that allows users to create, manage, organize, and track their tasks efficiently. The application features a responsive UI with real-time API integration, comprehensive error handling, and a clean, minimal design that prioritizes functionality over aesthetics.
 
-### ✨ Key Features
+###  Key Features
 
 - ✅ **Create Tasks** - Add new tasks with titles and timestamps
 - ✅ **Mark Complete** - Toggle task completion status with visual feedback
@@ -20,7 +20,7 @@ A clean, scalable, and production-ready Task Manager application built with mode
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### **Backend**
 - **Runtime:** Node.js
@@ -46,7 +46,7 @@ A clean, scalable, and production-ready Task Manager application built with mode
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Full_stack_todo/
@@ -89,7 +89,7 @@ Full_stack_todo/
 
 ---
 
-## 🚀 Setup Instructions
+##  Setup Instructions
 
 ### **Prerequisites**
 - Node.js 16+ installed
@@ -248,20 +248,20 @@ Delete a task
 
 ---
 
-## 🔒 Input Validation
+## Input Validation
 
 All inputs are validated before processing:
 
 ### **Task Title Validation**
-- ✅ Required field (cannot be undefined)
-- ✅ Must be a string
-- ✅ Cannot be empty or whitespace only
-- ✅ Maximum length: 500 characters
+-  Required field (cannot be undefined)
+-  Must be a string
+-  Cannot be empty or whitespace only
+-  Maximum length: 500 characters
 
 ### **Task ID Validation**
-- ✅ Required parameter
-- ✅ Must be valid UUID format
-- ✅ Returns 400 error for invalid IDs
+-  Required parameter
+-  Must be valid UUID format
+-  Returns 400 error for invalid IDs
 
 ### **HTTP Status Codes**
 - `200` - Successful GET, PATCH, DELETE
@@ -328,7 +328,7 @@ All inputs are validated before processing:
 
 ---
 
-## 🎨 Styling Approach
+##  Styling Approach
 
 The application uses **minimal vanilla CSS** with the following principles:
 
@@ -366,39 +366,38 @@ The application uses **minimal vanilla CSS** with the following principles:
 - **Note:** Data is lost on server restart (see Bonus Features for localStorage)
 
 ---
-
-## ⚡ Key Features Deep Dive
+##  Key Features Deep Dive
 
 ### **1. Error Handling**
-- ✅ Validation errors with clear messages
-- ✅ Resource not found (404) handling
-- ✅ Server error (500) with debug info in development
-- ✅ Frontend error banner with dismiss button
-- ✅ API health check on app load
+- Validation errors with clear messages
+- Resource not found (404) handling
+- Server error (500) with debug info in development
+- Frontend error banner with dismiss button
+- API health check on app load
 
 ### **2. Loading States**
-- ✅ Initial data loading indicator
-- ✅ Button disabled state during API calls
-- ✅ Loading message in form during submission
-- ✅ Prevention of duplicate submissions
+- Initial data loading indicator
+- Button disabled state during API calls
+- Loading message in form during submission
+- Prevention of duplicate submissions
 
 ### **3. User Experience**
-- ✅ Auto-clear input after task creation
-- ✅ Confirmation dialog before deletion
-- ✅ Real-time progress statistics
-- ✅ Task count badges on filter buttons
-- ✅ Visual feedback for completed tasks
+- Auto-clear input after task creation
+- Confirmation dialog before deletion
+- Real-time progress statistics
+- Task count badges on filter buttons
+- Visual feedback for completed tasks
 
 ### **4. Code Quality**
-- ✅ Meaningful variable names
-- ✅ JSDoc comments for functions
-- ✅ Separation of concerns (models, controllers, routes)
-- ✅ DRY principle (Don't Repeat Yourself)
-- ✅ Clean code formatting
+-  Meaningful variable names
+-  JSDoc comments for functions
+-  Separation of concerns (models, controllers, routes)
+-  DRY principle (Don't Repeat Yourself)
+-  Clean code formatting
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### **Backend Unit Tests**
 Run tests with:
@@ -444,42 +443,42 @@ Create Dockerfile and docker-compose.yml for containerization
 
 ---
 
-## 📋 Assumptions & Constraints
+##  Assumptions & Constraints
 
 ### **Data Storage**
-- ✅ In-memory storage only (no database)
-- ✅ Data lost on server restart
-- ✅ No authentication/authorization required
-- ✅ No user accounts or permissions
+-  In-memory storage only (no database)
+-  Data lost on server restart
+-  No authentication/authorization required
+-  No user accounts or permissions
 
 ### **Scalability**
-- ✅ Single-instance backend (no clustering)
-- ✅ No caching layer (no Redis)
-- ✅ No API rate limiting
-- ✅ No logging system
-- ✅ No monitoring/analytics
+-  Single-instance backend (no clustering)
+-  No caching layer (no Redis)
+-  No API rate limiting
+-  No logging system
+-  No monitoring/analytics
 
 ### **Performance**
-- ✅ Suitable for small numbers of tasks (< 1000)
-- ✅ No pagination or infinite scroll
-- ✅ No database indexing
-- ✅ Synchronous API responses
+-  Suitable for small numbers of tasks (< 1000)
+-  No pagination or infinite scroll
+-  No database indexing
+-  Synchronous API responses
 
 ### **Security**
-- ✅ No HTTPS enforcement (development only)
-- ✅ No CSRF tokens
-- ✅ No input sanitization (focus on validation)
-- ✅ No SQL injection protection (no database)
-- ✅ CORS enabled for localhost only
+-  No HTTPS enforcement (development only)
+-  No CSRF tokens
+-  No input sanitization (focus on validation)
+-  No SQL injection protection (no database)
+-  CORS enabled for localhost only
 
 ### **Browser Support**
-- ✅ Modern browsers with ES6+ support
-- ✅ Fetch API support required
+-  Modern browsers with ES6+ support
+-  Fetch API support required
 - ✅ No IE11 support
 
 ---
 
-## 🔧 Development Commands
+##  Development Commands
 
 ### **Backend**
 ```bash
@@ -498,7 +497,7 @@ npm run lint     # Run ESLint
 
 ---
 
-## 📚 Learning Resources
+##  Learning Resources
 
 This project demonstrates:
 - **RESTful API Design** - Proper HTTP methods and status codes
@@ -512,7 +511,7 @@ This project demonstrates:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 This is a learning project. Feel free to fork and extend!
 
@@ -528,13 +527,13 @@ This is a learning project. Feel free to fork and extend!
 
 ---
 
-## 📄 License
+##  License
 
 This project is open source and available under the MIT License.
 
 ---
 
-## 🎓 Project Statistics
+##  Project Statistics
 
 | Metric | Value |
 |--------|-------|
@@ -548,7 +547,7 @@ This project is open source and available under the MIT License.
 
 ---
 
-## ❓ FAQ
+##  FAQ
 
 ### **Why no database?**
 For simplicity and learning purposes. The in-memory store demonstrates the complete CRUD cycle without database complexity.
@@ -567,7 +566,7 @@ The app is fully responsive. For native mobile, consider React Native with the s
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### **Backend won't start**
 ```bash
@@ -593,6 +592,6 @@ npm run dev -- --port 3000  # Frontend
 
 ---
 
-**Built with ❤️ as a production-ready learning project**
+**Built with  as a production-ready learning project**
 
 For questions or improvements, feel free to open an issue or pull request!
