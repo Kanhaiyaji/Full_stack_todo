@@ -48,22 +48,21 @@ const validateTaskTitle = (req, res, next) => {
 const validateTaskId = (req, res, next) => {
   const { id } = req.params;
 
-  if (!id) {
+  if (id === undefined || id === null) {
     return res.status(400).json({
       success: false,
       message: 'Task ID is required'
     });
   }
 
-  // Basic UUID validation (check if it looks like a UUID)
-  const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-  if (!uuidRegex.test(id)) {
+  if (typeof id !== 'string' || id.trim().length === 0) {
     return res.status(400).json({
       success: false,
-      message: 'Invalid task ID format'
+      message: 'Invalid task ID'
     });
   }
 
+  req.params.id = id.trim();
   next();
 };
 
