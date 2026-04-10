@@ -6,11 +6,28 @@ const { errorHandler } = require('./src/middlewares/errorHandler');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const getOrigin = (value) => {
+  if (!value) return null;
+  try {
+    return new URL(value).origin;
+  } catch {
+    return null;
+  }
+};
+
+const allowedOrigins = new Set([
+  getOrigin(process.env.FRONTEND_URL),
+  'https://kanhaiyaji.github.io'
+].filter(Boolean));
+
 // Middlewares
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests from localhost on any port (development)
-    if (!origin || origin.includes('localhost') || origin.includes('127.0.0.1')) {
+    const isLocalhost = /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin || '');
+    const isAllowedOrigin = origin && allowedOrigins.has(origin);
+
+    // Allow same-machine tools (no origin), localhost dev, and configured production origins.
+    if (!origin || isLocalhost || isAllowedOrigin) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
