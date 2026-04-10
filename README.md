@@ -566,7 +566,33 @@ The app is fully responsive. For native mobile, consider React Native with the s
 
 ---
 
-##  Troubleshooting
+## 🚢 Deployment Notes
+
+- The app uses in-memory storage, so task data resets if the backend restarts.
+- Browser refresh does not delete tasks as long as the backend keeps running.
+- For this demo, start both servers locally before testing the app.
+- If you want persistence later, replace the in-memory store with a JSON file or database.
+- Frontend can be deployed on GitHub Pages from the `frontend` folder build output (`dist`).
+- Set `VITE_API_BASE_URL` to your live backend URL before building the frontend.
+
+---
+
+## 🌐 GitHub Pages Frontend Deploy
+
+1. Open the `frontend` folder in terminal.
+2. Set the production API URL in an env file, for example:
+  ```bash
+  VITE_API_BASE_URL=https://your-render-backend.onrender.com/api
+  ```
+3. Build and deploy:
+  ```bash
+  npm run deploy
+  ```
+4. In GitHub repository settings, keep GitHub Pages source on the branch published by `gh-pages`.
+
+---
+
+## 🐛 Troubleshooting
 
 ### **Backend won't start**
 ```bash
