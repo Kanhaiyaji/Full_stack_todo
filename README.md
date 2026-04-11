@@ -95,8 +95,11 @@ Full_stack_todo/
 - Node.js 16+ installed
 - npm or yarn package manager
 - Two terminal windows (one for backend, one for frontend)
+Open first this link in one tab :-  https://full-stack-todo-frej.onrender.com
+
 
 ### **Backend Setup**
+
 
 1. **Navigate to backend directory:**
    ```bash
